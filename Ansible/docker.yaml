@@ -19,7 +19,7 @@
       community.docker.docker_login:
         registry_url: https://index.docker.io/v1/
         username: dockerhub gauravtaodhikar62
-        password: dockerhub dckr_pat_JWq_X29o2p3X19SgbTYREJO3jjA
+        password: dockerhub dckr_X2jA
 
     - name: Push image
       command: sudo docker push gauravtaodhikar62/petstore:latest
