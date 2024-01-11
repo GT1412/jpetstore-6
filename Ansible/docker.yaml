@@ -1,6 +1,8 @@
 - name: docker build and push
   hosts: local  # Replace with the hostname or IP address of your target server
   become: yes  # Run tasks with sudo privileges
+  vars:
+    ansible_python_interpreter: /bin/python3
 
   tasks:
     - name: Update apt package cache
@@ -14,6 +16,7 @@
 
     - name: tag image
       command: sudo docker tag petstore:latest gauravtaodhikar62/petstore:latest 
+      
 
     - name: Log in to Docker Hub
       community.docker.docker_login:
